@@ -11,7 +11,7 @@ export default function GreetingResponse({ greeting, response }) {
         <p className="greeting">{greeting}</p>
         <img src={getChevron()} alt="chevron icon" className="icon" />
       </section>
-      {isExpanded && <p className="translation response">Reply : {response}</p>}
+      {isExpanded && <p className="translation response">{response}</p>}
     </article>
   );
 }
