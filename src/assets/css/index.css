@@ -182,8 +182,9 @@ p {
 .table {
   border-collapse: collapse;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  min-width: 30rem;
+  font-size: 2rem;
   margin: 0 auto;
+  width: 100%;
 }
 
 .table thead tr {
@@ -209,4 +210,10 @@ p {
   border-bottom: 2px solid #009879;
   border-radius: 30px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .table {
+    font-size: 1.5rem;
+  }
 }
