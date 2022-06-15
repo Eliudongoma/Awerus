@@ -2,9 +2,9 @@
 
 /* Color Pallete */
 :root {
-  --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
+  --color-headings: #1b0760;
 }
 
 /* Typography */
@@ -67,7 +67,7 @@ p {
 
 /* Icons */
 .icon {
-  color: var(--color-body-darker);
+  color: var(--color-body);
   width: 3rem;
 }
 
@@ -82,4 +82,22 @@ p {
   max-width: 1140px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* Table of Content */
+.tableOfContent {
+  background-color: #f8f4f4;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.tableOfContent__header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tableOfContent__heading {
+  color: var(--color-body-darker);
 }
