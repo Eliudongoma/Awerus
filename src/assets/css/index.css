@@ -113,8 +113,8 @@ p {
 }
 
 /* Maamkizi Section */
-.maamkizi .greeting,
-.maamkizi .response {
+.greeting,
+.response {
   margin: 0.7rem 0;
 }
 
