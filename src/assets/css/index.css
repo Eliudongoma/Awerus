@@ -5,6 +5,7 @@
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
   --color-headings: #1b0760;
+  --color-light: #f8f4f4;
 }
 
 /* Typography */
@@ -86,7 +87,7 @@ p {
 
 /* Table of Content */
 .tableOfContent {
-  background-color: #f8f4f4;
+  background-color: var(--color-light);
   border-radius: 1rem;
   padding: 0 1rem;
 }
@@ -127,4 +128,42 @@ p {
 
 .questionAnswer .icon {
   width: 1rem;
+}
+
+/* Page Navigators */
+.pages-navigators {
+  display: flex;
+  flex-direction: row;
+}
+
+.pages-navigators :first-child {
+  margin-right: 1rem;
+}
+
+.pages-navigators :first-child .page-navigator__section-name::before {
+  content: "<< ";
+}
+
+.pages-navigators :nth-child(2) {
+  margin-left: 1rem;
+}
+
+.pages-navigators :nth-child(2) .page-navigator__section-name::after {
+  content: " >>";
+}
+
+.page-navigator {
+  border: 1px solid var(--color-light);
+  border-radius: 10px;
+  padding: 0.2rem 1rem;
+  margin: 2rem 0;
+  width: 50%;
+}
+
+.page-navigator__section-name {
+  color: var(--color-body-darker);
+}
+
+.next-page-navigator {
+  text-align: right;
 }
