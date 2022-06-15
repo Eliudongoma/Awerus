@@ -8,4 +8,4 @@ const contents = [
 
 const getContents = () => contents;
 
-export default { getContents };
+export { getContents };

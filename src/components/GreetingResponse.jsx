@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
-import chevronDown from "../assets/icons/chevron-down.svg";
-import chevronRight from "../assets/icons/chevron-right.svg";
+import UseChevron from "../hooks/useChevron";
 
 export default function QuestionAnswer({ greeting, response }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const getChevron = () => (isExpanded ? chevronDown : chevronRight);
+  const { isExpanded, getChevron, toggleExpansion } = UseChevron();
 
   return (
     <article className="questionAnswer">
-      <section
-        className="questionAnswer__greeting"
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
+      <section className="questionAnswer__greeting" onClick={toggleExpansion}>
         <p className="greeting">{greeting}</p>
         <img src={getChevron()} alt="chevron icon" className="icon" />
       </section>
