@@ -64,3 +64,15 @@ p {
     font-size: 1.424rem;
   }
 }
+
+/* Icons */
+.icon {
+  color: var(--color-body-darker);
+  width: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .icon {
+    width: 2rem;
+  }
+}
