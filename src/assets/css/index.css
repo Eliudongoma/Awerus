@@ -106,3 +106,24 @@ p {
 .content {
   margin: 0.8rem 0;
 }
+
+/* Maamkizi Section */
+.maamkizi .greeting,
+.maamkizi .response {
+  margin: 0.7rem 0;
+}
+
+.translation {
+  color: var(--color-body-darker);
+}
+
+.questionAnswer__greeting {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.questionAnswer .icon {
+  width: 1rem;
+}
