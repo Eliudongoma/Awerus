@@ -129,25 +129,55 @@ const tarakimuMpakaMiaMoja = [
   { digit: 100, word: "Mia moja" },
 ];
 
-const getNumbersToTen = () => tarakimuMpakaKumi;
+const getNumbersToTen = () => ({
+  numbers: tarakimuMpakaKumi,
+  heading: "0 - 10",
+});
 
-const getNumbersToTwenty = () => tarakimuMpakaIshirini;
+const getNumbersToTwenty = () => ({
+  numbers: tarakimuMpakaIshirini,
+  heading: "11 - 20",
+});
 
-const getNumbersToThirty = () => tarakimuMpakaThalathini;
+const getNumbersToThirty = () => ({
+  numbers: tarakimuMpakaThalathini,
+  heading: "21 - 30",
+});
 
-const getNumbersToForty = () => tarakimuMpakaArobaini;
+const getNumbersToForty = () => ({
+  numbers: tarakimuMpakaArobaini,
+  heading: "31 - 40",
+});
 
-const getNumbersToFifty = () => tarakimuMpakaHamsini;
+const getNumbersToFifty = () => ({
+  numbers: tarakimuMpakaHamsini,
+  heading: "41 - 50",
+});
 
-const getNumbersToSixty = () => tarakimuMpakaSitini;
+const getNumbersToSixty = () => ({
+  numbers: tarakimuMpakaSitini,
+  heading: "51 - 60",
+});
 
-const getNumbersToSeventy = () => tarakimuMpakaSabini;
+const getNumbersToSeventy = () => ({
+  numbers: tarakimuMpakaSabini,
+  heading: "61 - 70",
+});
 
-const getNumbersToEighty = () => tarakimuMpakaThamanini;
+const getNumbersToEighty = () => ({
+  numbers: tarakimuMpakaThamanini,
+  heading: "71 - 80",
+});
 
-const getNumbersToNinety = () => tarakimuMpakaTisaini;
+const getNumbersToNinety = () => ({
+  numbers: tarakimuMpakaTisaini,
+  heading: "81 - 90",
+});
 
-const getNumbersToOneHundred = () => tarakimuMpakaMiaMoja;
+const getNumbersToOneHundred = () => ({
+  numbers: tarakimuMpakaMiaMoja,
+  heading: "91 - 100",
+});
 
 export {
   getNumbersToTen,
