@@ -1,4 +1,4 @@
-const sikuZaWiki = [
+const sikuSabaZaWiki = [
   { english: "Saturday", swahili: "Jumamosi" },
   { english: "Sunday", swahili: "Jumapili" },
   { english: "Monday", swahili: "Jumatatu" },
@@ -6,6 +6,10 @@ const sikuZaWiki = [
   { english: "Wednesday", swahili: "Jumatano" },
   { english: "Thursday", swahili: "Alhamisi" },
   { english: "Friday", swahili: "Ijumaa" },
+];
+
+const sikuZaWiki = [
+  ...sikuSabaZaWiki,
   { english: "The day before yesterday", swahili: "Juzi" },
   { english: "Yesterday", swahili: "Jana" },
   { english: "Today", swahili: "Leo" },
@@ -16,4 +20,6 @@ const sikuZaWiki = [
 
 const getSikuZaWiki = () => sikuZaWiki;
 
-export { getSikuZaWiki };
+const getSikuSabaZaWiki = () => sikuSabaZaWiki;
+
+export { getSikuSabaZaWiki, getSikuZaWiki };
