@@ -76,3 +76,10 @@ p {
     width: 2rem;
   }
 }
+
+/* Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem;
+}
