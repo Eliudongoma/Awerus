@@ -30,9 +30,11 @@ h2,
 h3 {
   color: var(--color-headings);
   letter-spacing: 0.5px;
+  font-weight: 900;
   margin-bottom: 1rem;
   margin-top: 3rem;
   text-shadow: 1.5px 0px var(--color-body);
+  word-spacing: 0.5rem;
 }
 
 h1 {
@@ -169,4 +171,42 @@ p {
 
 .next-page-navigator {
   text-align: right;
+}
+
+/* Tarakimu */
+.tarakimu__heading {
+  text-align: center;
+}
+
+/* Table */
+.table {
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  min-width: 30rem;
+  margin: 0 auto;
+}
+
+.table thead tr {
+  background-color: #009879;
+  color: #fff;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 1.2rem 1.5rem;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+  border-radius: 30px;
+  overflow: hidden;
 }
