@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { getGreetingsResponse } from "../services/fakeMaamkiziGreetingsResponse";
 import GreetingResponse from "../components/GreetingResponse";
+import PageNavigators from "../navigation/PageNavigators";
 
 export default function MaamkiziGreetingsSection() {
   const [greetingsResponse, setGreetingsResponse] = useState([]);
@@ -20,6 +21,12 @@ export default function MaamkiziGreetingsSection() {
           greeting={greeting}
         />
       ))}
+      <PageNavigators
+        nextSectionName="Greetings in Swahili"
+        onPreviousNavigation={() => console.log("previuos")}
+        onNextNavigation={() => console.log("next")}
+        previousSectionName="Handy Words"
+      />
     </section>
   );
 }
