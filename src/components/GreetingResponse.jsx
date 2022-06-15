@@ -2,7 +2,7 @@ import React from "react";
 
 import UseChevron from "../hooks/useChevron";
 
-export default function QuestionAnswer({ greeting, response }) {
+export default function GreetingResponse({ greeting, response }) {
   const { isExpanded, getChevron, toggleExpansion } = UseChevron();
 
   return (
