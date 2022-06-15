@@ -12,6 +12,7 @@
 body {
   color: var(--color-body);
   font-family: "Montserrat Alternates", sans-serif;
+  letter-spacing: 0.1px;
 }
 
 html {
@@ -28,8 +29,10 @@ h1,
 h2,
 h3 {
   color: var(--color-headings);
+  letter-spacing: 0.5px;
   margin-bottom: 1rem;
   margin-top: 3rem;
+  text-shadow: 1.5px 0px var(--color-body);
 }
 
 h1 {
