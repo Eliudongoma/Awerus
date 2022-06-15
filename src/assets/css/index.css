@@ -68,7 +68,7 @@ p {
 /* Icons */
 .icon {
   color: var(--color-body);
-  width: 3rem;
+  width: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -81,14 +81,14 @@ p {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 /* Table of Content */
 .tableOfContent {
   background-color: #f8f4f4;
   border-radius: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
 }
 
 .tableOfContent__header {
@@ -100,4 +100,9 @@ p {
 
 .tableOfContent__heading {
   color: var(--color-body-darker);
+  margin: 1rem 0;
+}
+
+.content {
+  margin: 0.8rem 0;
 }
