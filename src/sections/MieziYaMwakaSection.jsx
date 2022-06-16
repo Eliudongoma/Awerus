@@ -30,10 +30,10 @@ export default function MieziYaMwakaSection() {
       {notes.map(({ english, swahili }) => (
         <EnglishSwahiliInline english={english} swahili={swahili} />
       ))}
-      <h3>Zoezi</h3>
+      <h3 className="zoezi">Zoezi</h3>
       {mazoezi.map(({ mfano, swali }) => (
         <>
-          <p className="mfano">{mfano}</p>
+          <p className="zoezi__kichwa">{mfano}</p>
           <p>{swali}</p>
         </>
       ))}

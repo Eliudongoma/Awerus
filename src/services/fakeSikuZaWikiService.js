@@ -18,8 +18,25 @@ const sikuZaWiki = [
   { english: "Week", swahili: "Juma / wiki" },
 ];
 
+const mazoezi = [
+  {
+    kichwa: "Panga siku za wiki",
+    maswali: [
+      { swali: "Jumatatu" },
+      { swali: "ijumaa" },
+      { swali: "jumanne" },
+      { swali: "Alhamisi" },
+      { swali: "Jumamosi" },
+      { swali: "Jumapili" },
+      { swali: "Jumatano" },
+    ],
+  },
+];
+
 const getSikuZaWiki = () => sikuZaWiki;
 
 const getSikuSabaZaWiki = () => sikuSabaZaWiki;
 
-export { getSikuSabaZaWiki, getSikuZaWiki };
+const getMazoezi = () => mazoezi;
+
+export { getMazoezi, getSikuSabaZaWiki, getSikuZaWiki };
