@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { getGreetingsResponse } from "../services/fakeMaamkiziGreetingsResponse";
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
+import useApi from "../hooks/useApi";
 
 export default function MaamkiziGreetingsSection() {
-  const [greetingsResponse, setGreetingsResponse] = useState([]);
-
-  useEffect(() => {
-    setGreetingsResponse(getGreetingsResponse());
-  }, []);
+  const { data } = useApi(getGreetingsResponse);
 
   return (
     <section className="maamkizi">
       <h2>Maamkizi Greetings</h2>
-      {greetingsResponse.map(({ greeting, response }) => (
+      {data.map(({ greeting, response }) => (
         <SwahiliEnglish
           key={greeting}
           english={"Jibu: " + response}

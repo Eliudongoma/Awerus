@@ -179,15 +179,17 @@ const getNumbersToOneHundred = () => ({
   heading: "91 - 100",
 });
 
-export {
-  getNumbersToTen,
-  getNumbersToTwenty,
-  getNumbersToThirty,
-  getNumbersToForty,
-  getNumbersToFifty,
-  getNumbersToSixty,
-  getNumbersToSeventy,
-  getNumbersToEighty,
-  getNumbersToNinety,
-  getNumbersToOneHundred,
-};
+const getAllNumbers = () => [
+  getNumbersToTen(),
+  getNumbersToTwenty(),
+  getNumbersToThirty(),
+  getNumbersToForty(),
+  getNumbersToFifty(),
+  getNumbersToSixty(),
+  getNumbersToSeventy(),
+  getNumbersToEighty(),
+  getNumbersToNinety(),
+  getNumbersToOneHundred(),
+];
+
+export { getAllNumbers };

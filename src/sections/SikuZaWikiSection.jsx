@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { getMazoezi, getSikuZaWiki } from "../services/fakeSikuZaWikiService";
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
+import useApi from "../hooks/useApi";
 
 export default function SikuZaWikiSection() {
-  const [sikuZaWiki, setSikuZaWiki] = useState([]);
-  const [mazoezi, setMazoezi] = useState([]);
-
-  useEffect(() => {
-    setSikuZaWiki(getSikuZaWiki());
-    setMazoezi(getMazoezi());
-  }, []);
+  const { data: sikuZaWiki } = useApi(getSikuZaWiki);
+  const { data: mazoezi } = useApi(getMazoezi);
 
   return (
     <>

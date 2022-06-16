@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import {
   getNotes,
@@ -8,17 +8,12 @@ import {
 import EnglishSwahiliInline from "../components/EnglishSwahiliInline";
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
+import useApi from "../hooks/useApi";
 
 export default function MieziYaMwakaSection() {
-  const [miezi, setMiezi] = useState([]);
-  const [notes, setNotes] = useState([]);
-  const [mazoezi, setMazoezi] = useState([]);
-
-  useEffect(() => {
-    setNotes(getNotes());
-    setMiezi(getMieziYaMwaka());
-    setMazoezi(getMazoezi());
-  }, []);
+  const { data: miezi } = useApi(getMieziYaMwaka);
+  const { data: notes } = useApi(getNotes);
+  const { data: mazoezi } = useApi(getMazoezi);
 
   return (
     <section className="miezi-ya-mwaka">

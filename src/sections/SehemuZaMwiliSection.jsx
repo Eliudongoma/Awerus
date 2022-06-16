@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { getSehemuZaMwili } from "../services/fakeSehemuZaMwiliService";
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
+import useApi from "../hooks/useApi";
 
 export default function SehemuZaMwiliSection() {
-  const [sehemuZaMwili, setSehemuZaMwili] = useState([]);
-
-  useEffect(() => {
-    setSehemuZaMwili(getSehemuZaMwili());
-  }, []);
+  const { data } = useApi(getSehemuZaMwili);
 
   return (
     <section>
       <h2>Sehemu Za Mwili</h2>
-      {sehemuZaMwili.map(({ english, swahili }) => (
+      {data.map(({ english, swahili }) => (
         <SwahiliEnglish english={english} swahili={swahili} />
       ))}
       <PageNavigators

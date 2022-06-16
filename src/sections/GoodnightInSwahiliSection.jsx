@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { getGoodnightsInSwahili } from "../services/fakeGoodnightInSwahiliService";
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
+import useApi from "../hooks/useApi";
 
 export default function GoodnightInSwahiliSection() {
-  const [goodnights, setGoodnights] = useState([]);
-
-  useEffect(() => {
-    setGoodnights(getGoodnightsInSwahili());
-  }, []);
+  const { data: goodnights } = useApi(getGoodnightsInSwahili);
 
   return (
     <>

@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { getGoodByes } from "../services/fakeBiddingGoodbyeService";
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
+import useApi from "../hooks/useApi";
 
 export default function BiddingGoodbyeSection() {
-  const [goodbyes, setGoodbyes] = useState([]);
-
-  useEffect(() => {
-    setGoodbyes(getGoodByes());
-  }, []);
+  const { data: goodbyes } = useApi(getGoodByes);
 
   return (
     <section>

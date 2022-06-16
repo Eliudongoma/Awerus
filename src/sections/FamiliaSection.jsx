@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { getFamilia } from "../services/fakeFamiliaService";
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
+import useApi from "../hooks/useApi";
 
 export default function FamiliaSection() {
-  const [familia, setFamilia] = useState([]);
-
-  useEffect(() => {
-    setFamilia(getFamilia());
-  }, []);
+  const { data: familia } = useApi(getFamilia);
 
   return (
     <section>
