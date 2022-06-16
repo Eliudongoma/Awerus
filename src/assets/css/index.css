@@ -92,6 +92,7 @@ p {
 
 /* Table of Content */
 .tableOfContent {
+  cursor: pointer;
   background-color: var(--color-light);
   border-radius: 1rem;
   padding: 0 1rem;
@@ -126,6 +127,7 @@ p {
 
 .questionAnswer__greeting {
   align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -167,6 +169,7 @@ p {
 
 .page-navigator__section-name {
   color: var(--color-body-darker);
+  cursor: pointer;
 }
 
 .next-page-navigator {
