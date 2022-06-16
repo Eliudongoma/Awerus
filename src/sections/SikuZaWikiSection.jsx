@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { getMazoezi, getSikuZaWiki } from "../services/fakeSikuZaWikiService";
-import GreetingResponse from "../components/GreetingResponse";
 import PageNavigators from "../navigation/PageNavigators";
+import SwahiliEnglish from "../components/SwahiliEnglish";
 
 export default function SikuZaWikiSection() {
   const [sikuZaWiki, setSikuZaWiki] = useState([]);
@@ -17,7 +17,7 @@ export default function SikuZaWikiSection() {
     <>
       <h2>Siku za Wiki (Days of the Week)</h2>
       {sikuZaWiki.map(({ english, swahili }) => (
-        <GreetingResponse key={swahili} greeting={swahili} response={english} />
+        <SwahiliEnglish key={swahili} swahili={swahili} english={english} />
       ))}
       <h3 className="zoezi">Zoezi</h3>
       {mazoezi.map(({ kichwa, maswali }) => (

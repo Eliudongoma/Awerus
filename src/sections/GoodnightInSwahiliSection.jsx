@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 
 import { getGoodnightsInSwahili } from "../services/fakeGoodnightInSwahiliService";
-import GreetingResponse from "../components/GreetingResponse";
 import PageNavigators from "../navigation/PageNavigators";
+import SwahiliEnglish from "../components/SwahiliEnglish";
 
 export default function GoodnightInSwahiliSection() {
-  const [goodnightsInSwahili, setGoodnightsInSwahili] = useState([]);
+  const [goodnights, setGoodnights] = useState([]);
 
   useEffect(() => {
-    setGoodnightsInSwahili(getGoodnightsInSwahili());
+    setGoodnights(getGoodnightsInSwahili());
   }, []);
 
   return (
     <>
       <h2>Goodnight in Swahili</h2>
-      {goodnightsInSwahili.map(({ english, swahili }) => (
-        <GreetingResponse key={swahili} response={english} greeting={swahili} />
+      {goodnights.map(({ english, swahili }) => (
+        <SwahiliEnglish key={swahili} english={english} swahili={swahili} />
       ))}
       <PageNavigators
         nextSectionName="Greetings in Swahili"

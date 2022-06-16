@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { getGreetingsResponse } from "../services/fakeMaamkiziGreetingsResponse";
-import GreetingResponse from "../components/GreetingResponse";
 import PageNavigators from "../navigation/PageNavigators";
+import SwahiliEnglish from "../components/SwahiliEnglish";
 
 export default function MaamkiziGreetingsSection() {
   const [greetingsResponse, setGreetingsResponse] = useState([]);
@@ -15,10 +15,10 @@ export default function MaamkiziGreetingsSection() {
     <section className="maamkizi">
       <h2>Maamkizi Greetings</h2>
       {greetingsResponse.map(({ greeting, response }) => (
-        <GreetingResponse
+        <SwahiliEnglish
           key={greeting}
-          response={response}
-          greeting={greeting}
+          english={"Jibu: " + response}
+          swahili={greeting}
         />
       ))}
       <PageNavigators

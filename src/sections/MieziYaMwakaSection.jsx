@@ -6,8 +6,8 @@ import {
   getMazoezi,
 } from "../services/fakeMieziYaMwakaService";
 import EnglishSwahiliInline from "../components/EnglishSwahiliInline";
-import GreetingResponse from "../components/GreetingResponse";
 import PageNavigators from "../navigation/PageNavigators";
+import SwahiliEnglish from "../components/SwahiliEnglish";
 
 export default function MieziYaMwakaSection() {
   const [miezi, setMiezi] = useState([]);
@@ -24,7 +24,7 @@ export default function MieziYaMwakaSection() {
     <section className="miezi-ya-mwaka">
       <h2>Miezi Ya Mwaka</h2>
       {miezi.map(({ english, swahili }) => (
-        <GreetingResponse response={english} greeting={swahili} />
+        <SwahiliEnglish english={english} swahili={swahili} />
       ))}
       <h3>Note</h3>
       {notes.map(({ english, swahili }) => (

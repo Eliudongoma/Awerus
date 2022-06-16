@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { getPhrases } from "../services/fakePhrasesService";
-import GreetingResponse from "../components/GreetingResponse";
 import PageNavigators from "../navigation/PageNavigators";
+import SwahiliEnglish from "../components/SwahiliEnglish";
 
 export default function Phrases() {
   const [phrases, setPhrases] = useState([]);
@@ -13,9 +13,9 @@ export default function Phrases() {
 
   return (
     <>
-      <h2>Other useful phrases that will come in handy</h2>{" "}
+      <h2>Other useful phrases that will come in handy</h2>
       {phrases.map(({ english, swahili }) => (
-        <GreetingResponse greeting={swahili} response={english} />
+        <SwahiliEnglish swahili={swahili} english={english} />
       ))}
       <PageNavigators
         nextSectionName="Greetings in Swahili"

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { getGoodByes } from "../services/fakeBiddingGoodbyeService";
-import GreetingResponse from "../components/GreetingResponse";
 import PageNavigators from "../navigation/PageNavigators";
+import SwahiliEnglish from "../components/SwahiliEnglish";
 
 export default function BiddingGoodbyeSection() {
   const [goodbyes, setGoodbyes] = useState([]);
@@ -12,10 +12,10 @@ export default function BiddingGoodbyeSection() {
   }, []);
 
   return (
-    <>
+    <section>
       <h2>Bidding Goodbye in Swahili</h2>
       {goodbyes.map(({ swahili, english }) => (
-        <GreetingResponse greeting={swahili} response={english} />
+        <SwahiliEnglish swahili={swahili} english={english} />
       ))}
       <PageNavigators
         nextSectionName="Greetings in Swahili"
@@ -23,6 +23,6 @@ export default function BiddingGoodbyeSection() {
         onNextNavigation={() => console.log("next")}
         previousSectionName="Handy Words"
       />
-    </>
+    </section>
   );
 }

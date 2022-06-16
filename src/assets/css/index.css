@@ -116,8 +116,8 @@ p {
 }
 
 /* Maamkizi Section */
-.greeting,
-.response {
+.swahili-english__swahili,
+.swahili-english__english {
   margin: 0.7rem 0;
 }
 
@@ -125,7 +125,7 @@ p {
   color: var(--color-body-darker);
 }
 
-.questionAnswer__greeting {
+.swahili-english__swahili-container {
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -133,7 +133,7 @@ p {
   justify-content: space-between;
 }
 
-.questionAnswer .icon {
+.swahili-english .icon {
   width: 1rem;
 }
 
