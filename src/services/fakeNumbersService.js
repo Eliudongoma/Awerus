@@ -17,7 +17,7 @@ const tarakimuMpakaIshirini = [
   { digit: 12, word: "Kumi na mbili" },
   { digit: 13, word: "Kumi na tatu" },
   { digit: 14, word: "Kumi na nne" },
-  { digit: 16, word: "Kumi na tano" },
+  { digit: 15, word: "Kumi na tano" },
   { digit: 16, word: "Kumi na sita" },
   { digit: 17, word: "Kumi na saba" },
   { digit: 18, word: "Kumi na nane" },
