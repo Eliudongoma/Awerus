@@ -217,3 +217,13 @@ p {
     font-size: 1.5rem;
   }
 }
+
+/* English Swahili Inline */
+.english-swahili-inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.english-swahili-inline .swahili {
+  color: var(--color-body-darker);
+}
