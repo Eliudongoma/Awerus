@@ -6,7 +6,7 @@ const contents = [
   { heading: "Tarakimu" },
   { heading: "Siku za Wiki (Days of the week)" },
   { heading: "Miezi ya Mwaka (Months of the year)" },
-  { heading: "Familia (Familia)" },
+  { heading: "Familia (Family)" },
   { heading: "Sehemu za Mwili" },
 ];
 
