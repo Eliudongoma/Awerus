@@ -33,10 +33,10 @@ export default function MieziYaMwakaSection() {
         </>
       ))}
       <PageNavigators
-        nextSectionName="Greetings in Swahili"
-        onPreviousNavigation={() => console.log("previuos")}
-        onNextNavigation={() => console.log("next")}
-        previousSectionName="Handy Words"
+        nextUrl="/familia"
+        previousUrl="/siku-za-wiki"
+        nextSectionName="Familia"
+        previousSectionName="Siku za wiki"
       />
     </section>
   );

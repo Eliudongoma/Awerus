@@ -4,9 +4,16 @@ import { getGreetingsResponse } from "../services/fakeMaamkiziGreetingsResponse"
 import PageNavigators from "../navigation/PageNavigators";
 import SwahiliEnglish from "../components/SwahiliEnglish";
 import useApi from "../hooks/useApi";
+import { getContents } from "../services/fakeContentsService";
 
 export default function MaamkiziGreetingsSection() {
   const { data } = useApi(getGreetingsResponse);
+  const { data: contents } = useApi(getContents);
+
+  const find = () => {
+    console.log(contents);
+  };
+  find();
 
   return (
     <section className="maamkizi">
@@ -19,10 +26,8 @@ export default function MaamkiziGreetingsSection() {
         />
       ))}
       <PageNavigators
-        nextSectionName="Greetings in Swahili"
-        onPreviousNavigation={() => console.log("previuos")}
-        onNextNavigation={() => console.log("next")}
-        previousSectionName="Handy Words"
+        nextSectionName="Bidding goodbye"
+        nextUrl="/bidding-goodbye"
       />
     </section>
   );

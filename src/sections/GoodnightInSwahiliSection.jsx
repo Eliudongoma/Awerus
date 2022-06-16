@@ -15,10 +15,10 @@ export default function GoodnightInSwahiliSection() {
         <SwahiliEnglish key={swahili} english={english} swahili={swahili} />
       ))}
       <PageNavigators
-        nextSectionName="Greetings in Swahili"
-        onPreviousNavigation={() => console.log("previuos")}
-        onNextNavigation={() => console.log("next")}
-        previousSectionName="Handy Words"
+        nextSectionName="Other useful phrases that come in handy"
+        previousSectionName="Bidding goodbye in Swahili"
+        nextUrl="/useful-phrases"
+        previousUrl="/bidding-goodbye"
       />
     </>
   );

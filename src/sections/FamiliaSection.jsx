@@ -15,10 +15,10 @@ export default function FamiliaSection() {
         <SwahiliEnglish english={english} swahili={swahili} />
       ))}
       <PageNavigators
-        nextSectionName="Greetings in Swahili"
-        onPreviousNavigation={() => console.log("previuos")}
-        onNextNavigation={() => console.log("next")}
-        previousSectionName="Handy Words"
+        nextSectionName="Sehemu ya mwili"
+        nextUrl="/sehemu-za-mwili"
+        previousUrl="/miezi-ya-mwaka"
+        previousSectionName="Miezi ya Mwaka"
       />
     </section>
   );

@@ -15,10 +15,10 @@ export default function TarakimuSection() {
         <Table key={heading} data={numbers} heading={heading} />
       ))}
       <PageNavigators
-        nextSectionName="Greetings in Swahili"
-        onPreviousNavigation={() => console.log("previuos")}
-        onNextNavigation={() => console.log("next")}
-        previousSectionName="Handy Words"
+        nextSectionName="Siku za Wiki"
+        previousSectionName="Other useful phrases that come in handy"
+        nextUrl="/siku-za-wiki"
+        previousUrl="/useful-phrases"
       />
     </section>
   );

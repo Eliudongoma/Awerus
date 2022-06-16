@@ -1,29 +1,31 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function PageNavigators({
-  onNextNavigation,
-  onPreviousNavigation,
+  nextUrl = "",
+  previousUrl = "",
   nextSectionName,
   previousSectionName,
 }) {
   return (
     <section className="pages-navigators">
-      {previousSectionName && (
-        <section className="page-navigator" onClick={onPreviousNavigation}>
-          <p>Previous</p>
-          <p className="page-navigator__section-name">{previousSectionName}</p>
-        </section>
-      )}
+      <section className="page-navigator">
+        <p>Previous</p>
+        {previousSectionName && (
+          <NavLink to={previousUrl} className="page-navigator__section-name">
+            <p>{previousSectionName}</p>
+          </NavLink>
+        )}
+      </section>
 
-      {nextSectionName && (
-        <section
-          className="page-navigator next-page-navigator"
-          onClick={onNextNavigation}
-        >
-          <p>Next</p>
-          <p className="page-navigator__section-name">{nextSectionName}</p>
-        </section>
-      )}
+      <section className="page-navigator next-page-navigator">
+        <p>Next</p>
+        {nextSectionName && (
+          <NavLink to={nextUrl} className="page-navigator__section-name">
+            <p>{nextSectionName}</p>
+          </NavLink>
+        )}
+      </section>
     </section>
   );
 }

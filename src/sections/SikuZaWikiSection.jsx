@@ -25,10 +25,10 @@ export default function SikuZaWikiSection() {
         </>
       ))}
       <PageNavigators
-        nextSectionName="Greetings in Swahili"
-        onPreviousNavigation={() => console.log("previuos")}
-        onNextNavigation={() => console.log("next")}
-        previousSectionName="Handy Words"
+        nextSectionName="Miezi ya Mwaka"
+        previousSectionName="Tarakimu"
+        nextUrl="/miezi-ya-mwaka"
+        previousUrl="/tarakimu"
       />
     </>
   );

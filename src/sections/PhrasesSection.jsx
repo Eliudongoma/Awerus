@@ -15,10 +15,10 @@ export default function Phrases() {
         <SwahiliEnglish swahili={swahili} english={english} />
       ))}
       <PageNavigators
-        nextSectionName="Greetings in Swahili"
-        onPreviousNavigation={() => console.log("previuos")}
-        onNextNavigation={() => console.log("next")}
-        previousSectionName="Handy Words"
+        nextSectionName="Tarakimu"
+        previousSectionName="Goodnight in swahili"
+        nextUrl="/tarakimu"
+        previousUrl="/useful-phrases"
       />
     </>
   );

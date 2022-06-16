@@ -71,6 +71,11 @@ p {
   }
 }
 
+/* Links */
+a {
+  text-decoration: none;
+}
+
 /* Icons */
 .icon {
   color: var(--color-body);
