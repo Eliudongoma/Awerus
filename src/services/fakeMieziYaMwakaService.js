@@ -21,7 +21,13 @@ const notes = [
   { swahili: "Lini", english: "When" },
 ];
 
-const mazoezi = [{ swali: "Ulizaliwa lini?" }];
+const mazoezi = [
+  {
+    mfano:
+      "Example : Nilizaliwa tarehe nne mwezi wa nane ,mwaka wa elfu moja mia nane themanini na nne ( I was born on 4th August 1884)",
+    swali: "Ulizaliwa lini?",
+  },
+];
 
 const getMieziYaMwaka = () => mieziYaMwaka;
 

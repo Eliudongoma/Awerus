@@ -5,9 +5,9 @@ import {
   getMieziYaMwaka,
   getMazoezi,
 } from "../services/fakeMieziYaMwakaService";
+import EnglishSwahiliInline from "../components/EnglishSwahiliInline";
 import GreetingResponse from "../components/GreetingResponse";
 import PageNavigators from "../navigation/PageNavigators";
-import EnglishSwahiliInline from "../components/EnglishSwahiliInline";
 
 export default function MieziYaMwakaSection() {
   const [miezi, setMiezi] = useState([]);
@@ -21,7 +21,7 @@ export default function MieziYaMwakaSection() {
   }, []);
 
   return (
-    <>
+    <section className="miezi-ya-mwaka">
       <h2>Miezi Ya Mwaka</h2>
       {miezi.map(({ english, swahili }) => (
         <GreetingResponse response={english} greeting={swahili} />
@@ -31,8 +31,11 @@ export default function MieziYaMwakaSection() {
         <EnglishSwahiliInline english={english} swahili={swahili} />
       ))}
       <h3>Zoezi</h3>
-      {mazoezi.map(({ swali }) => (
-        <p>{swali}</p>
+      {mazoezi.map(({ mfano, swali }) => (
+        <>
+          <p className="mfano">{mfano}</p>
+          <p>{swali}</p>
+        </>
       ))}
       <PageNavigators
         nextSectionName="Greetings in Swahili"
@@ -40,6 +43,6 @@ export default function MieziYaMwakaSection() {
         onNextNavigation={() => console.log("next")}
         previousSectionName="Handy Words"
       />
-    </>
+    </section>
   );
 }

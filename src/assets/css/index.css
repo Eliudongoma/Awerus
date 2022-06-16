@@ -227,3 +227,8 @@ p {
 .english-swahili-inline .swahili {
   color: var(--color-body-darker);
 }
+
+/* Miezi ya Mwaka */
+.miezi-ya-mwaka .mfano {
+  color: var(--color-body-darker);
+}
